@@ -7,9 +7,12 @@ console.log("Follow the steps in the README.md file to complete the exercises:\n
 let numAnswer = Math.floor(Math.random()*11);
 let guess = prompt("Care to play a guessing game? If so, please enter a number between 1-10.");
 
-/* This is an if/else statement. If the guess is less than the number answer, it will alert "Too low!"
-If the guess is greater than the number answer, it will alert "Too high!" If the guess is equal to
-the number answer, it will alert "Congratulations!!!" */
+//evaluate if guess is valid input
+if (guess > 10 || guess < 1 || guess !== parseInt(guess)) {
+    alert("Enter valid number 1 - 10");
+} 
+
+//evaluate guess to answer
 if(guess < numAnswer) {
     alert("Too low!");
 } else if (guess > numAnswer) {
